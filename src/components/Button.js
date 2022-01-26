@@ -2,22 +2,26 @@ import React from "react"
 import styled from 'styled-components'
 import COLORS from "../Assets/color"
 
-function Link({href,children})
+// function Link({href,children})
+// {
+//     return <a href={href}>{children}</a>
+// }
+export  function Button({children,disabled,primary,secondary})
 {
-    return <a href={href}>{children}</a>
-}
-export  function Button({children,href,disabled,primary})
-{
-    if(href)
-    {
-        return <LinkStyled href ={href}>{children.toUpperCase()}</LinkStyled>
-    }
-    else if(disabled)
+    
+    if(disabled)
     {
         return <BtnDisabled>{children.toUpperCase()}</BtnDisabled>
     }
     else if(primary){
         return <PrimaryBtn>{children.toUpperCase()}</PrimaryBtn>
+    }
+    else if(secondary)
+    {
+        return <SecondaryBtn>{children.toUpperCase()}</SecondaryBtn>
+    }
+    else{
+        return <BtnWrapper>{children.toUpperCase()}</BtnWrapper>
     }
 }
 
@@ -36,22 +40,29 @@ border-radius: 4px;
 `
 const BtnDisabled = styled(BtnWrapper)`
     color:grey;
+    cursor: initial;
 
 `
-const LinkStyled = styled.a`
-font-size: 13px;
-color:${COLORS.primary};
-text-decoration:none;
-cursor: pointer;
-padding:7px 10px;
-font-weight:bold;
+// const LinkStyled = styled.a`
+// font-size: 13px;
+// color:${COLORS.primary};
+// text-decoration:none;
+// cursor: pointer;
+// padding:7px 10px;
+// font-weight:bold;
 
-&:hover{
-    background-color: ${COLORS.primary};
-}
-`
+// &:hover{
+//     background-color: ${COLORS.primary};
+// }
+
 const PrimaryBtn = styled(BtnWrapper)`
     background-color: ${COLORS.primary};
+    color:${COLORS.white}
+
+`
+
+const SecondaryBtn = styled(BtnWrapper)`
+    background-color: ${COLORS.secondary};
     color:${COLORS.white}
 
 `

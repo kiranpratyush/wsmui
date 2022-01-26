@@ -1,7 +1,7 @@
 import {Button} from "../components/Button";
 import React from "react"
 export default {
-    title:"Button/text",
+    title:"Button/Main",
     Component:"Button"
 }
 
@@ -13,18 +13,23 @@ const Template = ({label,...args2})=><Button {...args2} >{label}</Button>
 export const Primary = Template.bind({})
 Primary.args ={
     label:"Click Here",
-    primary:"primary"
+    primary:true
+}
+export const Secondary = Template.bind({})
+Secondary.args ={
+    label:"Click Here",
+    secondary:true
 }
 
 export const Disabled = Template.bind({})
 Disabled.args ={
-    ...Primary.args,
-    disabled:"disabled",
+    label:"Click Here",
+    disabled:true,
    
 }
 
-export const Link = Template.bind({})
-Link.args ={
-    ...Primary.args,
-    href:"#"
-}
+// export const Link = Template.bind({})
+// Link.args ={
+//     ...Primary.args,
+//     href:"#"
+// }

@@ -1,6 +1,7 @@
 export const COLORS = {
     baseColor:"rgb(225,225,226)",
     primary: 'rgb(33, 133, 208)',
+    secondary:"rgb(27,28,29)",
     white:"#fff",
     gray300: 'hsl(0deg 0% 75%)',
     gray500: 'hsl(0deg 0% 50%)',
