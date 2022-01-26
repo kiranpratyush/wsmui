@@ -10,6 +10,10 @@ export default {
 const Template = ({label,...args2})=><Button {...args2} >{label}</Button>
 
 // // export const Primary = Template.bind({})
+export const Base = Template.bind({})
+Base.args ={
+    label:"Click Here"
+}
 export const Primary = Template.bind({})
 Primary.args ={
     label:"Click Here",
