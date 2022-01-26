@@ -1,27 +1,30 @@
 import {Button} from "../components/Button";
 import React from "react"
 export default {
-    title:"Button",
+    title:"Button/text",
     Component:"Button"
 }
 
 
 
-const Template = ({children,...args2})=><Button {...args2} >{children}</Button>
+const Template = ({label,...args2})=><Button {...args2} >{label}</Button>
 
 // // export const Primary = Template.bind({})
+export const Primary = Template.bind({})
+Primary.args ={
+    label:"Click Here",
+    primary:"primary"
+}
 
 export const Disabled = Template.bind({})
 Disabled.args ={
+    ...Primary.args,
     disabled:"disabled",
-    children:"I am good"
+   
 }
-export const Primary = Template.bind({})
-Primary.args ={
-    children:"Primary"
-}
+
 export const Link = Template.bind({})
 Link.args ={
-    children:"Link",
+    ...Primary.args,
     href:"#"
 }
