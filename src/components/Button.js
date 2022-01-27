@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import COLORS from "../Assets/color"
 import { SIZES } from "../Assets/buttonSize"
 
-// function Link({href,children})
-// {
-//     return <a href={href}>{children}</a>
-// }
 export  function Button(props)
 {   const children = props.children
     const disabled = props.disabled
