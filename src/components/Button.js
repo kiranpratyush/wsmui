@@ -63,17 +63,7 @@ const BtnDisabled = styled(BtnWrapper)`
     cursor: initial;
 
 `
-// const LinkStyled = styled.a`
-// font-size: 13px;
-// color:${COLORS.primary};
-// text-decoration:none;
-// cursor: pointer;
-// padding:7px 10px;
-// font-weight:bold;
 
-// &:hover{
-//     background-color: ${COLORS.primary};
-// }
 
 const PrimaryBtn = styled(BtnWrapper)`
     background-color: ${COLORS.primary};
