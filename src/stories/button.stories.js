@@ -2,7 +2,7 @@ import {Button} from "../components/Button";
 import React from "react"
 export default {
     title:"Button/Main",
-    Component:"Button"
+    Component:"Button",
 }
 
 
@@ -30,6 +30,25 @@ Disabled.args ={
     label:"Click Here",
     disabled:true,
    
+}
+
+export const Colored = Template.bind({})
+Colored.args = {
+    label:"Click Here",
+    color:"red",
+    size:"medium"
+}
+Colored.argTypes ={
+    color:{
+        control:'color'
+
+    },
+
+    size: {
+          options: ['small', 'medium','large'],
+          control: { type: 'select' },
+        },
+      
 }
 
 // export const Link = Template.bind({})
